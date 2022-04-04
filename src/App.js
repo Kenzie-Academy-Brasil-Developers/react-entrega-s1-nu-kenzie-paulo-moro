@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { useState } from 'react';
+import Form from './components/Form';
+import List from './components/List';
+import TotalCard from './components/TotalCard';
+import Nukenzie from "./files/img/NuKenzie.png"
 
 function App() {
+  const [listTransactions, setLisTransactions] = useState([
+    { description: "Salário recebido", type: "entrada", value: 2500 },
+    { description: "Conta de luz", type: "saída", value: -150 }
+  ])
+
+  function addTransaction(newTransaction){
+    if(listTransactions.length > 0){
+      setLisTransactions([...listTransactions, newTransaction])
+    }else{
+      setLisTransactions([newTransaction])
+    }
+  } 
+  function rmvTransaction(event){
+    const cardId = event.target.id
+    console.log(cardId)
+    
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={Nukenzie} alt='nukenzieLogo'></img>
+        <button className='header--toHome'>Inicio</button>        
       </header>
+      <main className='main'>
+        <Form addTransaction={addTransaction}/>
+        <TotalCard listTransactions={listTransactions}/>
+        <List listTransactions={listTransactions} rmvTransaction={rmvTransaction} setLisTransactions = {setLisTransactions}/>
+      </main>
     </div>
   );
 }

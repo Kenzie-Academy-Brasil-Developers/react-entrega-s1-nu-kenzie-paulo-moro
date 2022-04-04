@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito:wght@400;700&display=swap');
+
+.container--formularioRegistro{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 351px;
+    justify-content: space-around;
+    align-items: center;
+}
+.form--inputDescricao{
+  width: 314px;
+  height: 52.8px;
+  width: 314px;
+  border-radius: 8px;
+  padding: 0px, 16px, 0px, 16px;
+  border: 2px solid #F8F9FA;
+  background-color: #F8F9FA;
+  color:#868E96;
+  outline: none;    
+}
+
+.form--inputValor{
+    width: 100px;
+    height: 48px;
+    padding: 0px, 16px, 0px, 16px;
+    background-color: #F8F9FA;
+    border-radius: 8px 0px 0px 8px;
+    border: 2px solid #F8F9FA;
+    color:#868E96;
+    outline: none;
+}
+.form--selectType{
+    width: 150px;
+    height: 48px;
+    padding: 0px, 16px, 0px, 16px;
+    background-color: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    border-radius: 8px;
+    color:#868E96;
+    outline: none;
+}
+.Form--sendBTN{
+    width: 314px;
+    height: 48px;
+    border: 2px solid #FD377E;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding:13px, 20px, 13px, 20px;
+    background-color: #FD377E;
+}
+
+.form--container--description{
+    width: 314px;
+    height: 88px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form--container--valor{
+    height: 79px;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form--container--tipo{
+    height: 79px;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form--titulo-h3{
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;  
+  margin: 0px;
+  color: #212529;
+  width: 100%;
+  text-align: left;
+}
+.form--valor--R{
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  color: #868E96;
+  width: 32px;
+  background-color: #F8F9FA;
+  height: 38px;
+  margin: 0px;
+  padding-top: 12px;
+  border-radius: 0px 8px 8px 0px;
+  margin-top: 2px;
+}
+.form--descricao--exemplo{
+  font-family: 'Inter';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #868E96;
+}
+
+.form--select-option{
+    line-height: 48px;    
+    width: 100px;
+    border-radius: 0px;
+    background-color: #F8F9FA;
+    color: #868E96;
+    
+
+
+}
+
+.form--select-option:hover{
+    background-color: #E9ECEF;
+    color: #868E96;
+}
+
+
+@media(min-width:500px){
+  .container--formularioRegistro{
+    width: 363px;
+    height: 351px;
+  }
+}
