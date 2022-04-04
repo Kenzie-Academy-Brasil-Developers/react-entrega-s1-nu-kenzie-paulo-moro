@@ -7,23 +7,19 @@ import TotalCard from './components/TotalCard';
 import Nukenzie from "./files/img/NuKenzie.png"
 
 function App() {
-  const [listTransactions, setLisTransactions] = useState([
+  const [listTransactions, setListTransactions] = useState([
     { description: "Salário recebido", type: "entrada", value: 2500 },
     { description: "Conta de luz", type: "saída", value: -150 }
   ])
 
   function addTransaction(newTransaction){
     if(listTransactions.length > 0){
-      setLisTransactions([...listTransactions, newTransaction])
+      setListTransactions([...listTransactions, newTransaction])
     }else{
-      setLisTransactions([newTransaction])
+      setListTransactions([newTransaction])
     }
   } 
-  function rmvTransaction(event){
-    const cardId = event.target.id
-    console.log(cardId)
-    
-  }
+  
 
   return (
     <div className="App">
@@ -34,7 +30,7 @@ function App() {
       <main className='main'>
         <Form addTransaction={addTransaction}/>
         <TotalCard listTransactions={listTransactions}/>
-        <List listTransactions={listTransactions} rmvTransaction={rmvTransaction} setLisTransactions = {setLisTransactions}/>
+        <List listTransactions={listTransactions} setListTransactions = {setListTransactions}/>
       </main>
     </div>
   );

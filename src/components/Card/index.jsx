@@ -1,11 +1,21 @@
 import "./style.css"
 import trash from "./../../files/img/trash.png"
 
-function Card(transaction,{setListTransactions,listTransactions}){
-  const {description, type, value, id} = transaction.transaction
+function Card({transaction,setListTransactions,listTransactions}){
+ 
+  const {description, type, value, id} = transaction
+
+
   function rmvTransaction(event){
     const cardId = event.target.id
+
     setListTransactions(listTransactions.filter((transact)=>{
+      
+      console.log(transact.id )
+      return transact.id !== cardId
+    }))
+    console.log(listTransactions.filter((transact)=>{
+      
       return transact.id !== cardId
     }))
     

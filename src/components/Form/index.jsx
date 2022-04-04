@@ -5,7 +5,7 @@ function Form({addTransaction}){
   let counter = 0
   function idGen(){
     counter++
-    return counter
+    return counter.toString()
   }
 
   function captureDataForm(event){

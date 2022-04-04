@@ -8,7 +8,7 @@ function List({listTransactions, setListTransactions}){
   const [filtroEntrada, setFiltroEntrada] = useState(false)
   const [filtroSaida, setFiltroSaida] = useState(false)
   const [filtroTodos, setFiltroTodos] = useState(false)
-
+  
 
   function handleEntrada(){
     setFiltroEntrada(true)
@@ -40,12 +40,7 @@ function List({listTransactions, setListTransactions}){
             ))}
           </>
         )
-      }
-      else{
-        <>
-          <p>Você não possui nenhum lançamento</p>
-        </>
-      }
+      }     
     }
     else if(filtroSaida){
       const filterByOut =listTransactions.filter((transaction)=>{
@@ -62,11 +57,7 @@ function List({listTransactions, setListTransactions}){
           </>
         )
       }
-      else{
-        <>
-          <p>Você não possui nenhum lançamento</p>
-        </>
-      }
+      
     }
     else if(filtroTodos){
       if(listTransactions.length !== 0){
