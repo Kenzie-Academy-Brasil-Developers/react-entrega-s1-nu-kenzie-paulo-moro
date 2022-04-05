@@ -8,8 +8,8 @@ import Nukenzie from "./files/img/NuKenzie.png"
 
 function App() {
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 }
+    { description: "Salário recebido", type: "entrada", value: 2500, id:"1" },
+    { description: "Conta de luz", type: "saída", value: -150, id:"2" }
   ])
 
   function addTransaction(newTransaction){

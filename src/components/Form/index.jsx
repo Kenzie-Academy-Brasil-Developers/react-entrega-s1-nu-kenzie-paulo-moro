@@ -2,7 +2,7 @@ import "./style.css"
 
 function Form({addTransaction}){
   
-  let counter = 0
+  let counter = 3
   function idGen(){
     counter++
     return counter.toString()
