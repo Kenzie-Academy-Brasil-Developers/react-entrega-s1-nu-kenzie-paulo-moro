@@ -83,7 +83,7 @@ function List({listTransactions, setListTransactions}){
     <ul className="container--listaTransacoes">
       <span className="container--tituloFiltros">
         <h2 className="listaTransacoes--titulo">Resumo Financeiro</h2>
-        <input className="inputRadio" type="radio" name="transacoes" value="todos" id="todos"  onClick={handleTodos}/>
+        <input className="inputRadio" type="radio" name="transacoes" value="todos" id="todos" onClick={handleTodos}/>
         <label className="transacoes--Label" htmlFor="todos">Todos</label>
         <input className="inputRadio" type="radio" name="transacoes" value="entrada" id="entrada" onClick={handleEntrada}/>
         <label className="transacoes--Label" htmlFor="entrada">Entrada</label>

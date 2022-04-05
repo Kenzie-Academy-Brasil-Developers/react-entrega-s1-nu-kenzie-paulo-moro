@@ -29,14 +29,16 @@ function Form({addTransaction}){
       if(dataForm.hasOwnProperty("value")){
         dataForm.id = idGen()
       }
+      
     }
+  
     
     return dataForm
   }
   
   function handleSubmit(event){
     event.preventDefault()
-    if(captureDataForm(event).hasOwnProperty("value")){
+    if(!isNaN(captureDataForm(event).value) && captureDataForm(event).description){
       addTransaction(captureDataForm(event))
     }
     
